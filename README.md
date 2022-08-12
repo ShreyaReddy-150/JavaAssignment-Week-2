@@ -1,6 +1,10 @@
 # JavaAssignment-Week-2
 
+
+
 **Part 1 Output**
+
+
 
 Database One monthly Cost: $2,700.00
 Storage: 5.000TB
