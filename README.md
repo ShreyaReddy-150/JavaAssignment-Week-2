@@ -1,6 +1,6 @@
 # JavaAssignment-Week-2
 
-## Part 1 Output
+**Part 1 Output**
 
 Database One monthly Cost: $2,700.00
 Storage: 5.000TB
@@ -33,7 +33,7 @@ Cost Factor: 1.3
 -------------------
 Number of Objects created: 4
 
-## Part 2 Output
+**Part 2 Output**
 
 -------------------------
 Monthly Database Report
