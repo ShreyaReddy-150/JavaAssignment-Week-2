@@ -1,0 +1,61 @@
+package p1;
+
+public class distributedDB extends database {
+	
+	protected int nUser; //number of Users
+	protected double cpu; //Cost per User
+	
+	public static final double COST_FACTOR=1.1;
+
+	public distributedDB(String name, double bCost, double DBStorage, int nUser,double cpu)
+	{
+		super(name,bCost,DBStorage);
+		setnUser(nUser);
+		setCpu(cpu);
+	}
+
+	public int getnUser() {
+		return nUser;
+	}
+
+	public void setnUser(int nUser) {
+		this.nUser = nUser;
+	}
+
+	public double getCpu() {
+		return cpu;
+	}
+
+	public void setCpu(double cpu) {
+		this.cpu = cpu;
+	}
+
+	public double UserCost() {
+		return nUser*cpu;
+	}
+	
+	public double getCostFactor()
+	{
+		return COST_FACTOR;
+	}
+	
+	@Override
+	public double monthlyCost() {
+		
+		return bCost+(UserCost()*COST_FACTOR);
+	}
+
+	public String toString()
+	{
+		String s1=super.toString();
+		String s2="Number of Users: "+nUser;
+		String s3="Cost per User: "+String.format("$%,.2f", cpu);
+		String s4="User Cost: "+String.format("$%,.2f",UserCost());
+		String s5="Cost Factor: "+getCostFactor();
+		return s1+"\n"+s2+"\n"+s3+"\n"+s4+"\n"+s5;
+	}
+	
+
+}
+
+
